@@ -1,0 +1,29 @@
+we have an application inside a container
+the container is cover by an envelop called: pod
+the pod itselft is overape by an envelop called: node
+the node is cover by an envelop called: cluster
+- A cluster can have multiple node
+- A node can have multiple pod
+- A pod can have multiple container
+- A container can have an application
+the cluster is cover by an envelop called: the master
+inside a master we have:
+- a scheduler: organize the node and pod inside a cluster
+- API: act exactly as a data center of a master
+- A controller manager: the boss of the master
+- ETCD: act exactly as a storage in the master
+insider a node we: 
+- Docker: help to built containers
+- kubelete: help to facilitate informations between the node and the API
+- kube-proxy: help to provide internet in the node.
+inside a pod we have:
+- a container: build by docker
+- a volume: automate by a server to be consumed by the application
+- the application: provided by the administrator
+different type of volume:
+- Storageclass: (SC) volume consumed by a cluster
+- persistent volume:(PV) volume dispace by the storage class 
+- persistent volume claim (PVC): volume consume by a node
+- hostpath: volume consume by a pod but can die if a pod die
+- EmptyDir: volume inside a container
+
